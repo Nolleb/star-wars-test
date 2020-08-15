@@ -1,4 +1,5 @@
 import styles from "../assets/stylesheets/styles.scss";
+import Header from "./components/Header";
 // A jsx pragma method to create html dom elements (more info below)
 function createElement(tagName, attrs = {}, ...children) {
 	const elem = Object.assign(document.createElement(tagName), attrs);
@@ -14,6 +15,7 @@ const name = "Geoff";
 const friends = ["Sarah", "James", "Hercule"];
 
 // Create some dom elements
+
 const app = (
 	<div className="app">
 		<h1 className="title"> Hello, world! </h1>
@@ -28,6 +30,8 @@ const app = (
 		</ul>
 	</div>
 );
+
+app.appendChild(Header);
 
 // Render our dom elements
 window.document.getElementById("app").replaceWith(app);

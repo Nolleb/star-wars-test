@@ -1,7 +1,14 @@
-const Header = () => {
-	return "Hello header";
-};
+import image from "../../assets/images/logo.png";
 
-const title = "Star Wars, The Force Awaken";
+function createElement(tagName, attrs = {}, ...children) {
+	const elem = Object.assign(document.createElement(tagName), attrs);
+	for (const child of children) {
+		if (Array.isArray(child)) elem.append(...child);
+		else elem.append(child);
+	}
+	return elem;
+}
 
-export { Header, title };
+const Header = <img alt="star wars logo" src={image} />;
+
+export default Header;
