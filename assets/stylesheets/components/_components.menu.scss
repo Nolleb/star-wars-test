@@ -1,0 +1,14 @@
+.c-menu {
+	height: 60px;
+	margin: 0;
+	line-height: 60px;
+	&__link {
+		text-transform: uppercase;
+		color: $color-white;
+		font-weight: bold;
+		text-decoration: none;
+	}
+	&__item:not(:first-child) {
+		margin-left: 30px;
+	}
+}

@@ -1,0 +1,16 @@
+.is-flex {
+	display: flex;
+}
+.is-full-width {
+	width: 100%;
+}
+
+.is-half-width {
+	width: 50%;
+}
+.is-one-third-width {
+	width: calc(100% / 3);
+}
+.has-text-center {
+	text-align: center;
+}
