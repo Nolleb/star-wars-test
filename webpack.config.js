@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 let config = {
 	mode: "development",
-	entry: "./src/index.jsx",
+	entry: "./src/index.js",
 	output: {
 		path: path.resolve(__dirname, "./public"),
 		filename: "./bundle.js",
@@ -12,7 +12,7 @@ let config = {
 	module: {
 		rules: [
 			{
-				test: /\.jsx?$/,
+				test: /\.js?$/,
 				exclude: /node_modules/,
 				use: [
 					{

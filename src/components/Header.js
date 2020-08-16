@@ -1,14 +1,17 @@
 import image from "../../assets/images/logo.png";
+import createElement from "../helper/createElement";
+import Menu from "./Menu";
 
-function createElement(tagName, attrs = {}, ...children) {
-	const elem = Object.assign(document.createElement(tagName), attrs);
-	for (const child of children) {
-		if (Array.isArray(child)) elem.append(...child);
-		else elem.append(child);
-	}
-	return elem;
-}
+createElement();
 
-const Header = <img alt="star wars logo" src={image} />;
+const Header = (
+	<header className="c-header">
+		<div className="c-header__img-container">
+			<img className="c-header__img" alt="star wars logo" src={image} />
+		</div>
+	</header>
+);
+
+Header.prepend(Menu);
 
 export default Header;
