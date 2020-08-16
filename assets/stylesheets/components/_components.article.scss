@@ -1,0 +1,11 @@
+.c-article {
+	margin-bottom: $global-spacing-unit;
+	font-weight: 100;
+	line-height: 1.5;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	& > p:last-child {
+		margin-bottom: 0;
+	}
+}

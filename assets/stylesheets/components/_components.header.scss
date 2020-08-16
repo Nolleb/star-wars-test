@@ -1,14 +1,15 @@
 .c-header {
 	background: url("../images/header-bg.png") repeat-x center;
 	background-size: contain;
-	min-height: 500px;
 	display: flex;
 	flex-direction: column;
+	min-height: 500px;
 
 	&__img-container {
 		flex: 1;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		padding-top: 60px;
 	}
 }

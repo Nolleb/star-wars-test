@@ -2,4 +2,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	&__item:not(:first-child) {
+		margin-left: $global-spacing-unit;
+	}
 }

@@ -2,6 +2,9 @@
 	height: 60px;
 	margin: 0;
 	line-height: 60px;
+	position: fixed;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.5);
 	&__link {
 		text-transform: uppercase;
 		color: $color-white;

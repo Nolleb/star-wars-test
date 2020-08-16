@@ -1,5 +1,7 @@
 import createElement from "../helper/createElement";
-
+import iconFacebook from "../../assets/images/icon_facebook.png";
+import iconTwitter from "../../assets/images/icon_twitter.png";
+import iconInstagram from "../../assets/images/icon_instagram.png";
 createElement();
 
 const title = "TM Lucasfilm Ltd. All Rights Reserved.";
@@ -34,15 +36,21 @@ const Footer = (
 			</div>
 			<div className="c-footer__column">
 				<h2 className="is-uppercase">Follow star wars</h2>
-				<ul>
-					<li>
-						<a href="#">Facebook</a>
+				<ul className="o-list">
+					<li className="o-list__item">
+						<a href="#">
+							<img alt="icon facebook" src={iconFacebook} />
+						</a>
 					</li>
-					<li>
-						<a href="#">Twitter</a>
+					<li className="o-list__item">
+						<a href="#">
+							<img alt="icon twitter" src={iconTwitter} />
+						</a>
 					</li>
-					<li>
-						<a href="#">Instagram</a>
+					<li className="o-list__item">
+						<a href="#">
+							<img alt="icon instagram" src={iconInstagram} />
+						</a>
 					</li>
 				</ul>
 			</div>
