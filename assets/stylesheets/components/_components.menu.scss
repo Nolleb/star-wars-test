@@ -5,6 +5,7 @@
 	position: fixed;
 	width: 100%;
 	background: rgba(0, 0, 0, 0.5);
+	z-index: 10;
 	&__link {
 		text-transform: uppercase;
 		color: $color-white;

@@ -2,6 +2,8 @@
 	margin-bottom: $global-spacing-unit;
 	font-weight: 100;
 	line-height: 1.5;
+	background: $color-white;
+	padding: 20px;
 	&:last-child {
 		margin-bottom: 0;
 	}

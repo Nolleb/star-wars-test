@@ -7,7 +7,7 @@ const title = "Star Wars, The Force Awaken";
 
 const SectionAd = (
 	<section className="is-flex">
-		<article className="is-half-width c-article">
+		<article id="article" className="is-half-width c-article">
 			<h2>{title}</h2>
 			<p>
 				Plus de 30 ans après la bataille d'Endor, la galaxie n'en a pas fini

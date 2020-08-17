@@ -7,7 +7,11 @@ import createElement from "../assets/js/helper/createElement";
 import Troopers from "../assets/js/components/Troopers";
 import Footer from "../assets/js/components/Footer";
 
+import parallax from "../assets/js/parallax";
+
 createElement();
+
+window.addEventListener("scroll", parallax);
 
 const app = <div className="app"></div>;
 app.appendChild(Header);
