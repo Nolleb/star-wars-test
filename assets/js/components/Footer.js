@@ -1,7 +1,7 @@
 import createElement from "../helper/createElement";
-import iconFacebook from "../../assets/images/icon_facebook.png";
-import iconTwitter from "../../assets/images/icon_twitter.png";
-import iconInstagram from "../../assets/images/icon_instagram.png";
+import iconFacebook from "../../images/icon_facebook.png";
+import iconTwitter from "../../images/icon_twitter.png";
+import iconInstagram from "../../images/icon_instagram.png";
 createElement();
 
 const title = "TM Lucasfilm Ltd. All Rights Reserved.";

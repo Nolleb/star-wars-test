@@ -1,4 +1,4 @@
-import image from "../../assets/images/r2d2_c3p0-2x.jpg";
+import image from "../../images/r2d2_c3p0-2x.jpg";
 import createElement from "../helper/createElement";
 
 createElement();

@@ -1,4 +1,4 @@
-import image from "../../assets/images/adgame.jpg";
+import image from "../../images/adgame.jpg";
 import createElement from "../helper/createElement";
 
 createElement();

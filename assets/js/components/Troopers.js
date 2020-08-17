@@ -1,4 +1,4 @@
-import image from "../../assets/images/stormtroopers-2x.jpg";
+import image from "../../images/stormtroopers-2x.jpg";
 import createElement from "../helper/createElement";
 
 createElement();

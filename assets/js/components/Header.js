@@ -1,4 +1,4 @@
-import image from "../../assets/images/logo.png";
+import image from "../../images/logo.png";
 import createElement from "../helper/createElement";
 import Menu from "./Menu";
 
