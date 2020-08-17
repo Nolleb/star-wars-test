@@ -6,7 +6,7 @@ createElement();
 
 const Header = (
 	<header className="c-header">
-		<div className="c-header__inner">
+		<div className="c-header__inner block-image">
 			<div className="c-header__img-container">
 				<img className="c-header__img" alt="star wars logo" src={image} />
 			</div>

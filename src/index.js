@@ -7,11 +7,20 @@ import createElement from "../assets/js/helper/createElement";
 import Troopers from "../assets/js/components/Troopers";
 import Footer from "../assets/js/components/Footer";
 
-import parallax from "../assets/js/parallax";
+import { Parallax } from "../assets/js/parallax";
 
 createElement();
 
-window.addEventListener("scroll", parallax);
+window.addEventListener("load", function () {
+	const head = document.querySelector(".c-header");
+	const firstArticle = document.getElementById("article");
+	const parallaxHead = new Parallax(head);
+	const parallaxArticle = new Parallax(firstArticle);
+	window.addEventListener("scroll", function () {
+		parallaxHead.activeParallax();
+		parallaxArticle.activeParallax();
+	});
+});
 
 const app = <div className="app"></div>;
 app.appendChild(Header);

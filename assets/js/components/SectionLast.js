@@ -8,7 +8,7 @@ const SectionLast = (
 		<h1 className="has-text-center">
 			A long time ago, in a galaxy far, far away…
 		</h1>
-		<article>
+		<article id="article2">
 			<div className="o-media c-article">
 				<img alt="droids" src={image} />
 				<p className="o-media__content">
