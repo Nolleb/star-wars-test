@@ -5,7 +5,7 @@ createElement();
 
 const Kiloren = (
 	<div className="full-width">
-		<img alt="Kiloren" src={image} />
+		<img alt="Kiloren" src={image} id="kiloren" className="is-relative" />
 	</div>
 );
 

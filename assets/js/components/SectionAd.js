@@ -6,7 +6,7 @@ createElement();
 const title = "Star Wars, The Force Awaken";
 
 const SectionAd = (
-	<section className="is-flex">
+	<section className="is-flex" id="sectionAd">
 		<article id="article" className="is-half-width">
 			<div className="c-article">
 				<h2>{title}</h2>
@@ -53,7 +53,7 @@ const SectionAd = (
 			</div>
 		</article>
 		<aside class="is-half-width">
-			<img alt="pub" src={image} />
+			<img alt="pub" src={image} id="ad" className="c-ad is-relative" />
 		</aside>
 	</section>
 );

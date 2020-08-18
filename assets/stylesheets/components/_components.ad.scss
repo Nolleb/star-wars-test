@@ -1,0 +1,10 @@
+.c-ad {
+	&.is-fixed {
+		top: 0;
+		right: 50px;
+	}
+	&.is-absolute {
+		bottom: 0;
+		right: 50px;
+	}
+}

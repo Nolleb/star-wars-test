@@ -7,7 +7,8 @@ import createElement from "../assets/js/helper/createElement";
 import Troopers from "../assets/js/components/Troopers";
 import Footer from "../assets/js/components/Footer";
 
-import { Parallax } from "../assets/js/parallax";
+import { Parallax } from "../assets/js/scripts/parallax";
+import adScroll from "../assets/js/scripts/adScroll";
 
 createElement();
 
@@ -19,6 +20,7 @@ window.addEventListener("load", function () {
 	window.addEventListener("scroll", function () {
 		parallaxHead.activeParallax();
 		parallaxArticle.activeParallax();
+		adScroll();
 	});
 });
 
