@@ -1,10 +1,8 @@
 .c-ad {
+	position: relative;
 	&.is-fixed {
 		top: 0;
 		right: 50px;
-	}
-	&.is-absolute {
-		bottom: 0;
-		right: 50px;
+		position: sticky;
 	}
 }

@@ -1,5 +1,3 @@
-import SectionAd from "../components/SectionAd";
-
 export default function adScroll() {
 	let y = window.scrollY;
 
@@ -7,9 +5,7 @@ export default function adScroll() {
 	const sectionAd = document.getElementById("sectionAd");
 
 	const sectionAdOffset = getElementOffset(sectionAd);
-	const sectionAdHeight = SectionAd.offsetHeight;
 	let sectionFromTopScreen = sectionAdOffset - y;
-	let sectionFromBottomScreen = sectionAdOffset + sectionAdHeight - y;
 
 	if (sectionFromTopScreen <= 0) {
 		removeClass(ad);
@@ -17,10 +13,6 @@ export default function adScroll() {
 	} else {
 		removeClass(ad);
 		ad.classList.add("is-relative");
-	}
-	if (sectionFromBottomScreen < y) {
-		removeClass(ad);
-		ad.classList.add("is-absolute");
 	}
 }
 
@@ -30,6 +22,6 @@ function getElementOffset(el) {
 }
 
 function removeClass(selector) {
-	const classesToRemove = ["is-relative", "is-absolute", "is-fixed"];
+	const classesToRemove = ["is-relative", "is-fixed"];
 	selector.classList.remove(...classesToRemove);
 }
