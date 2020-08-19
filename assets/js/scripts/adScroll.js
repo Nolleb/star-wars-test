@@ -6,23 +6,20 @@ export default function adScroll() {
 	const ad = document.getElementById("ad");
 	const sectionAd = document.getElementById("sectionAd");
 
-	let sectionAdOffset = getElementOffset(sectionAd);
+	const sectionAdOffset = getElementOffset(sectionAd);
 	const sectionAdHeight = SectionAd.offsetHeight;
-	let sectionFromTopScreen = sectionAdOffset + 50 - y;
-	let sectionFromBottomScreen = sectionAdOffset + sectionAdHeight + 100 - y;
+	let sectionFromTopScreen = sectionAdOffset - y;
+	let sectionFromBottomScreen = sectionAdOffset + sectionAdHeight - y;
 
 	if (sectionFromTopScreen <= 0) {
-		ad.classList.remove("is-relative");
-		ad.classList.remove("is-absolute");
+		removeClass(ad);
 		ad.classList.add("is-fixed");
 	} else {
-		ad.classList.remove("is-fixed");
-		ad.classList.remove("is-absolute");
+		removeClass(ad);
 		ad.classList.add("is-relative");
 	}
-	if (sectionFromBottomScreen <= y) {
-		ad.classList.remove("is-relative");
-		ad.classList.remove("is-fixed");
+	if (sectionFromBottomScreen < y) {
+		removeClass(ad);
 		ad.classList.add("is-absolute");
 	}
 }
@@ -30,4 +27,9 @@ export default function adScroll() {
 function getElementOffset(el) {
 	const rect = el.getBoundingClientRect();
 	return rect.top + window.pageYOffset;
+}
+
+function removeClass(selector) {
+	const classesToRemove = ["is-relative", "is-absolute", "is-fixed"];
+	selector.classList.remove(...classesToRemove);
 }

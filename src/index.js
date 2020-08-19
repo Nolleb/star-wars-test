@@ -4,6 +4,7 @@ import SectionAd from "../assets/js/components/SectionAd";
 import Kiloren from "../assets/js/components/Kiloren";
 import SectionLast from "../assets/js/components/SectionLast";
 import createElement from "../assets/js/helper/createElement";
+import debounce from "../assets/js/helper/debounce";
 import Troopers from "../assets/js/components/Troopers";
 import Footer from "../assets/js/components/Footer";
 
@@ -18,9 +19,9 @@ window.addEventListener("load", function () {
 	const parallaxHead = new Parallax(head);
 	const parallaxArticle = new Parallax(firstArticle);
 	window.addEventListener("scroll", function () {
-		parallaxHead.activeParallax();
-		parallaxArticle.activeParallax();
-		adScroll();
+		debounce(parallaxHead.activeParallax());
+		debounce(parallaxArticle.activeParallax());
+		debounce(adScroll());
 	});
 });
 
