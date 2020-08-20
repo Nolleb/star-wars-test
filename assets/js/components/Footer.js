@@ -36,7 +36,7 @@ const Footer = (
 			</div>
 			<div className="c-footer__column">
 				<h2 className="is-uppercase">Follow star wars</h2>
-				<ul className="o-list">
+				<ul className="o-list c-footer__list">
 					<li className="o-list__item">
 						<a href="#">
 							<img alt="icon facebook" src={iconFacebook} />

@@ -3,6 +3,7 @@
 	align-items: unset;
 	justify-content: center;
 	padding: 40px;
+
 	@include mq($from: large) {
 		height: 60px;
 		top: 0;
@@ -42,7 +43,7 @@
 
 #toggle:checked ~ .c-menu {
 	display: flex;
-	background: pink;
+	background: url("../images/header-bg.png") repeat-y center;
 	height: 100vh;
 	position: fixed;
 	top: 0;

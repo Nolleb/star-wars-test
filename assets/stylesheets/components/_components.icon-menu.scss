@@ -1,7 +1,9 @@
 .icon-open {
 	right: $global-spacing-unit;
+	position: absolute;
 }
 .icon-close {
+	position: fixed;
 	left: $global-spacing-unit;
 	display: none;
 }
@@ -12,7 +14,6 @@
 }
 .icon-open,
 .icon-close {
-	position: absolute;
 	top: $global-spacing-unit;
 	z-index: 2;
 	cursor: pointer;

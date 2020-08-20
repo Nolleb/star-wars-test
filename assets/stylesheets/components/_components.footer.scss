@@ -53,4 +53,12 @@
 			margin-bottom: 100px;
 		}
 	}
+	&__list.o-list {
+		@include mq($until: large) {
+			flex-direction: row;
+			& > li:not(first-child) {
+				margin-left: $global-spacing-unit;
+			}
+		}
+	}
 }

@@ -10,7 +10,7 @@ const SectionLast = (
 		</h1>
 		<article id="article2">
 			<div className="o-media c-article">
-				<img alt="droids" src={image} />
+				<img className="c-article__media" alt="droids" src={image} />
 				<p className="o-media__content">
 					<b>
 						<i>La Guerre des étoiles</i>
