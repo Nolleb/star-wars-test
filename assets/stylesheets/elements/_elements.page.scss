@@ -1,10 +1,17 @@
 section {
-	padding: 50px;
 	position: relative;
+	padding: 20px;
+	@include mq($from: large) {
+		padding: 50px;
+	}
 }
 
 aside {
-	margin-left: auto;
+	display: none;
+	@include mq($from: large) {
+		display: block;
+		margin-left: auto;
+	}
 }
 body {
 	background-color: $color-white;

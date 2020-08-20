@@ -1,8 +1,12 @@
 .o-list {
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	&__item:not(:first-child) {
-		margin-left: $global-spacing-unit;
+	flex-direction: column;
+	@include mq($from: large) {
+		align-items: center;
+		flex-direction: row;
+		justify-content: center;
+		&__item:not(:first-child) {
+			margin-left: $global-spacing-unit;
+		}
 	}
 }

@@ -7,7 +7,7 @@ const title = "Star Wars, The Force Awaken";
 
 const SectionAd = (
 	<section className="is-flex" id="sectionAd">
-		<article id="article" className="is-half-width">
+		<article id="article" className="is-mobile is-half-width-desktop">
 			<div className="c-article">
 				<h2>{title}</h2>
 				<p>

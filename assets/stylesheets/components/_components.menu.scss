@@ -1,18 +1,53 @@
 .c-menu {
-	height: 60px;
-	margin: 0;
-	line-height: 60px;
-	position: fixed;
-	width: 100%;
-	background: rgba(0, 0, 0, 0.5);
-	z-index: 10;
+	display: none;
+	align-items: unset;
+	justify-content: center;
+	padding: 40px;
+	@include mq($from: large) {
+		height: 60px;
+		top: 0;
+		margin: 0;
+		line-height: 60px;
+		position: fixed;
+		width: 100%;
+		background: rgba(0, 0, 0, 0.5);
+		z-index: 10;
+		display: block;
+		padding: 0;
+	}
 	&__link {
 		text-transform: uppercase;
 		color: $color-white;
 		font-weight: bold;
 		text-decoration: none;
 	}
-	&__item:not(:first-child) {
-		margin-left: 30px;
+	&__item {
+		font-size: 30px;
+		&:not(:first-child) {
+			margin-top: 20px;
+			@include mq($from: large) {
+				margin: 0;
+			}
+		}
+		@include mq($from: large) {
+			font-size: 20px;
+		}
 	}
+	&__item:not(:first-child) {
+		@include mq($from: large) {
+			margin-left: 30px;
+		}
+	}
+}
+
+#toggle:checked ~ .c-menu {
+	display: flex;
+	background: pink;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
 }

@@ -1,10 +1,13 @@
 .c-header {
 	&__inner {
 		background: url("../images/header-bg.png") repeat-x center;
-		background-size: contain;
 		display: flex;
+		background-size: cover;
 		flex-direction: column;
 		min-height: 500px;
+		@include mq($from: large) {
+			background-size: contain;
+		}
 	}
 
 	&__img-container {
@@ -12,6 +15,11 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding-top: 60px;
+		& > img {
+			width: auto;
+		}
+		@include mq($from: large) {
+			padding-top: 60px;
+		}
 	}
 }

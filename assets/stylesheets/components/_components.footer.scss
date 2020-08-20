@@ -3,25 +3,54 @@
 	background-size: 100%;
 	min-height: 400px;
 	background-size: cover;
-	padding-top: 50px;
-	padding-bottom: 50px;
-	padding-left: 100px;
-	padding-right: 100px;
-	color: lightgrey;
+	padding: $global-spacing-unit;
+	color: $color-footer;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+
+	@include mq($from: large) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		padding-left: 100px;
+		padding-right: 100px;
+	}
 	& > * {
 		color: currentColor;
 	}
 	&__inner {
-		display: flex;
-		justify-content: flex-start;
+		@include mq($from: large) {
+			display: flex;
+			justify-content: flex-start;
+		}
 	}
 	&__column {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		width: calc(100% / 3);
+		display: inline-block;
+		width: 50%;
+
+		@include mq($from: large) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: calc(100% / 3);
+		}
+		&:last-child {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			margin-top: $global-spacing-unit * 2;
+			@include mq($from: large) {
+				margin: 0;
+				width: calc(100% / 3);
+			}
+		}
 	}
 	&__title {
-		margin-bottom: 100px;
+		display: none;
+		@include mq($from: large) {
+			display: block;
+			margin-bottom: 100px;
+		}
 	}
 }

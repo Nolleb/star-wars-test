@@ -5,9 +5,17 @@
 	width: 100%;
 }
 
-.is-half-width {
-	width: 50%;
+.is-half-width-desktop {
+	@include mq($from: large) {
+		width: 50%;
+	}
 }
+.is-mobile {
+	@include mq($until: small) {
+		width: 100%;
+	}
+}
+
 .is-one-third-width {
 	width: calc(100% / 3);
 }
@@ -24,4 +32,7 @@
 }
 .is-absolute {
 	position: absolute;
+}
+.is-hidden {
+	display: none;
 }

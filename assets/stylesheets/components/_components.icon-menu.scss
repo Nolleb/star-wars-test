@@ -1,0 +1,25 @@
+.icon-open {
+	right: $global-spacing-unit;
+}
+.icon-close {
+	left: $global-spacing-unit;
+	display: none;
+}
+.icon-menu {
+	@include mq($from: large) {
+		display: none;
+	}
+}
+.icon-open,
+.icon-close {
+	position: absolute;
+	top: $global-spacing-unit;
+	z-index: 2;
+	cursor: pointer;
+}
+#toggle:checked ~ .icon-menu .icon-open {
+	display: none;
+}
+#toggle:checked ~ .icon-menu .icon-close {
+	display: block;
+}
