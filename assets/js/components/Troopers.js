@@ -1,11 +1,15 @@
-import image from "../../images/stormtroopers-2x.jpg";
+import imageMobile from "../../images/stormtroopers.jpg";
+import imageDesktop from "../../images/stormtroopers-2x.jpg";
 import createElement from "../helper/createElement";
 
 createElement();
 
 const Troopers = (
 	<div className="full-width">
-		<img alt="StormTroopers" src={image} />
+		<picture>
+			<source media="(min-width: 1024px)" srcset={imageDesktop} />
+			<img src={imageMobile} alt="StormTroopers" />
+		</picture>
 	</div>
 );
 

@@ -1,6 +1,7 @@
 .c-footer {
-	background: url("../images/darthvader_2x.jpg") no-repeat top center;
+	background: url("../images/darthvader.jpg") no-repeat top center;
 	background-size: 100%;
+	background-color: $color-black;
 	min-height: 400px;
 	background-size: cover;
 	padding: $global-spacing-unit;
@@ -11,6 +12,8 @@
 	justify-content: space-evenly;
 
 	@include mq($from: large) {
+		background: url("../images/darthvader_2x.jpg") no-repeat top center;
+		background-color: $color-black;
 		padding-top: 50px;
 		padding-bottom: 50px;
 		padding-left: 100px;

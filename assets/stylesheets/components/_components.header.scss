@@ -6,6 +6,7 @@
 		flex-direction: column;
 		min-height: 500px;
 		@include mq($from: large) {
+			background: url("../images/header-bg-2x.png") repeat-x center;
 			background-size: contain;
 		}
 	}

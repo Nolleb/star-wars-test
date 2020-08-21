@@ -8,9 +8,9 @@ export default function adScroll() {
 	let sectionFromTopScreen = sectionAdOffset - y;
 
 	if (sectionFromTopScreen <= 0) {
-		ad.classList.add("is-fixed");
+		ad.classList.add("is-sticky");
 	} else {
-		ad.classList.remove("is-fixed");
+		ad.classList.remove("is-sticky");
 	}
 }
 

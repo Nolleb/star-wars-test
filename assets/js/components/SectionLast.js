@@ -1,4 +1,5 @@
-import image from "../../images/r2d2_c3p0-2x.jpg";
+import imageDesktop from "../../images/r2d2_c3p0-2x.jpg";
+import imageMobile from "../../images/r2d2_c3p0.jpg";
 import createElement from "../helper/createElement";
 
 createElement();
@@ -10,7 +11,10 @@ const SectionLast = (
 		</h1>
 		<article id="article2">
 			<div className="o-media c-article">
-				<img className="c-article__media" alt="droids" src={image} />
+				<picture>
+					<source media="(min-width: 1024px)" srcset={imageDesktop} />
+					<img className="c-article__media" src={imageMobile} alt="droids" />
+				</picture>
 				<p className="o-media__content">
 					<b>
 						<i>La Guerre des étoiles</i>
