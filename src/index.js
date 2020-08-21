@@ -13,14 +13,26 @@ import adScroll from "../assets/js/scripts/adScroll";
 
 createElement();
 
+let parallaxActive = false;
+
+window.addEventListener("resize", function () {
+	if (window.innerWidth > 1025) {
+		parallaxActive = true;
+	} else {
+		parallaxActive = false;
+	}
+});
+
 window.addEventListener("load", function () {
 	const head = document.querySelector(".c-header");
 	const firstArticle = document.getElementById("article");
 	const parallaxHead = new Parallax(head);
 	const parallaxArticle = new Parallax(firstArticle);
 	window.addEventListener("scroll", function () {
-		debounce(parallaxHead.activeParallax());
-		debounce(parallaxArticle.activeParallax());
+		if (parallaxActive) {
+			debounce(parallaxHead.activeParallax());
+			debounce(parallaxArticle.activeParallax());
+		}
 		debounce(adScroll());
 	});
 });
@@ -33,5 +45,4 @@ app.appendChild(SectionLast);
 app.appendChild(Troopers);
 app.appendChild(Footer);
 
-// Render our dom elements
 window.document.getElementById("app").replaceWith(app);
