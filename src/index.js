@@ -14,16 +14,21 @@ import adScroll from "../assets/js/scripts/adScroll";
 createElement();
 
 let parallaxActive = false;
-
-window.addEventListener("resize", function () {
+function getParallaxActive() {
 	if (window.innerWidth > 1025) {
 		parallaxActive = true;
 	} else {
 		parallaxActive = false;
 	}
+	return parallaxActive;
+}
+
+window.addEventListener("resize", function () {
+	getParallaxActive();
 });
 
 window.addEventListener("load", function () {
+	getParallaxActive();
 	const head = document.querySelector(".c-header");
 	const firstArticle = document.getElementById("article");
 	const parallaxHead = new Parallax(head);
@@ -32,6 +37,9 @@ window.addEventListener("load", function () {
 		if (parallaxActive) {
 			debounce(parallaxHead.activeParallax());
 			debounce(parallaxArticle.activeParallax());
+		} else {
+			parallaxHead.resetParallax();
+			parallaxArticle.resetParallax();
 		}
 		debounce(adScroll());
 	});

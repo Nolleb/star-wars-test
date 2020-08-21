@@ -21,3 +21,19 @@ Parallax.prototype.activeParallax = function () {
 		this.block.style.top = scrollVal * 0.5 + "px";
 	}
 };
+Parallax.prototype.resetParallax = function () {
+	if (this.img != null) {
+		this.img.style.position = "static";
+		this.img.style.top = 0 + "px";
+	}
+	if (this.text != null) {
+		this.text.forEach((element) => {
+			element.style.position = "static";
+			element.style.top = 0 + "px";
+		});
+	}
+	if (this.block != null) {
+		this.block.style.position = "static";
+		this.block.style.top = 0 + "px";
+	}
+};

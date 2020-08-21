@@ -53,7 +53,7 @@ const SectionAd = (
 			</div>
 		</article>
 		<aside class="is-half-width">
-			<img alt="pub" src={image} id="ad" className="c-ad is-relative" />
+			<img alt="pub" src={image} id="ad" className="c-ad-img" />
 		</aside>
 	</section>
 );
